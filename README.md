@@ -3,8 +3,7 @@
 2. click on get started,
 3. used this command to install it ion vs code: ng add @angular/material
 4. Ds ce projet, on a répondu yes à ces 4 questions:
-    - The package @angular/material@17.0.4 will be installed and     executed.
-    - Would you like to proceed? 
+    - The package @angular/material@17.0.4 will be installed and executed. Would you like to proceed? 
     - ? Choose a prebuilt theme name, or "custom" for a custom theme: Indigo/Pink        
     - ? Set up global Angular Material typography styles? Yes
     - ? Include the Angular animations module? Include and enable animations
