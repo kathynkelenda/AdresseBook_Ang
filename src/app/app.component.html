@@ -1,14 +1,55 @@
-<button mat-button>Basic</button>
-<button mat-button color="primary">Primary</button>
-<button mat-button color="accent">Accent</button>
-<button mat-button color="warn">Warn</button>
-<button mat-button disabled>Disabled</button>
+<mat-toolbar color="primary">
 
-<br>
+    <button mat-icon-button (click)="sidenav.toggle()" id="menuIcon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
 
-<button mat-raised-button>Basic</button>
-    <button mat-raised-button color="primary">Primary</button>
-    <button mat-raised-button color="accent">Accent</button>
-    <button mat-raised-button color="warn">Warn</button>
-    <button mat-raised-button disabled>Disabled</button>
-  
+    <span id="menuTitle">Address Book</span>
+    <a mat-button routerLink="/" class="top-menu-item">
+      <mat-icon>home</mat-icon> Home
+    </a>
+    <a mat-button routerLink="/contacts" class="top-menu-item">
+      <mat-icon>group</mat-icon> Contacts
+    </a>
+    <a mat-button routerLink="/newcontact" class="top-menu-item">
+      <mat-icon>person_add</mat-icon> New contacts
+    </a>
+    
+</mat-toolbar>
+
+<mat-sidenav-container  >
+    <mat-sidenav #sidenav [fixedInViewport]="true" [fixedTopGap]="60" mode="side" >
+      <div  class="side-nav-items">
+        <div>
+
+          <a mat-button (click)="sidenav.close()" routerLink="/" class="side-menu-item">
+            <mat-icon>home</mat-icon> Home
+          </a>  
+
+        </div>
+        <div>
+
+          <a mat-button (click)="sidenav.close()" routerLink="/contacts" class="side-menu-item">
+            <mat-icon>group</mat-icon> Contacts
+          </a>
+        
+        </div>
+        <div>
+
+          <a mat-button (click)="sidenav.close()" routerLink="/newcontact" class="side-menu-item">
+            <mat-icon>person_add</mat-icon> New contacts
+          </a>
+        
+        </div>
+      </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+
+      <div class="main-content">
+          <router-outlet></router-outlet>
+      </div>
+
+    </mat-sidenav-content>
+</mat-sidenav-container> 
+

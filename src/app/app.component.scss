@@ -1,0 +1,49 @@
+#menuTitle{
+    font-size:medium;
+    margin-right: 20px; 
+}
+
+.mat-sidenav{
+    background-color: #3f51b5;
+    width: 160px;
+}
+
+.mat-toolbar{
+    height: 60px;
+}
+
+.side-nav-items{
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu-item{
+    color:white !important; /*!important: Force l'application de
+    la couleur quand elle est barrée à l'inspection sur le navigateur
+    et ne s'applique pas sur l'écran.*/
+    margin-top: 20px;
+}
+
+.main-content{
+    margin: 20px;
+}
+
+@media(min-width: 900px){
+    /* Dépassé la largeur minimale de 900px, cet élément ne 
+      s'affiche pas. */
+    #menuIcon {
+        display: none;
+    }
+
+    .mat-sidenav{
+        display: none;
+    }
+}
+
+@media(max-width: 900px){
+    /* Not visible in small-screen = Le maximum de largeur
+    à partir duquel il apparait est 900. */
+    .top-menu-item {
+        display: none;
+    }
+}
