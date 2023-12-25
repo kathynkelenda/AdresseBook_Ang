@@ -1,0 +1,30 @@
+.actionButtons{
+    margin-right: 20px;
+
+}
+
+#contactCard{
+    min-width: 50%;  
+}
+
+.main-content{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.myInputs{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+//Rend le formulaire petit sur les petits écrans
+/*Sur un écran < à 900px*/
+@media(max-width: 900px){
+    #contactCard{
+        /*La largeur de l'écran aura coè limite < 400px.*/
+        min-width: 400px;
+    }
+
+}

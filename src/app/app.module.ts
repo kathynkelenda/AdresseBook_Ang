@@ -13,6 +13,10 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import {MatTableModule} from '@angular/material/table';
+import {MatCardModule} from '@angular/material/card';
+import {ReactiveFormsModule} from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
     declarations: [
@@ -30,7 +34,11 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
         MatToolbarModule,
         MatIconModule,
         MatSidenavModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        MatTableModule,
+        MatCardModule,
+        ReactiveFormsModule,
+        MatInputModule
         
     ],
     providers: [],
