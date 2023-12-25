@@ -22,4 +22,5 @@ export class ContactsComponent implements OnInit {
     console.log(this.contacstService.getContacts());
   }
 
+
 }
