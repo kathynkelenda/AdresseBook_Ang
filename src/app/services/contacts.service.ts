@@ -18,4 +18,22 @@ export class ContactsService {
     return this.contacts;
   }
 
+  updateContacts(newcontact: Contact){
+    //find the highest Id
+    let highestId = 0;
+    this.contacts.forEach(contactObject => {
+      if(contactObject.Id > highestId) {
+        highestId = contactObject.Id;
+      }
+    })
+
+    this.contacts.push({
+      Id: highestId + 1,
+      FirstName: newcontact.FirstName,
+      LastName: newcontact.LastName,
+      PhoneNumber: newcontact.PhoneNumber,
+      Address: newcontact.Address
+    })
+  }
+
 }
