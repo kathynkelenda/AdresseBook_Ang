@@ -7,6 +7,8 @@ import { AppComponent } from "./app.component";
 import { HomeComponent } from "./home/home.component";
 import { ContactsComponent } from "./contacts/contacts.component";
 import { NewcontactComponent } from "./newcontact/newcontact.component";
+import { UpdateDialogComponent } from "./dialogs/update-dialog/update-dialog.component";
+import { DeleteDialogComponent } from "./dialogs/delete-dialog/delete-dialog.component";
 
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -17,13 +19,16 @@ import {MatTableModule} from '@angular/material/table';
 import {MatCardModule} from '@angular/material/card';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
         ContactsComponent,
-        NewcontactComponent
+        NewcontactComponent,
+        UpdateDialogComponent,
+        DeleteDialogComponent
     ],
     imports: [
         BrowserModule,
@@ -38,7 +43,8 @@ import {MatInputModule} from '@angular/material/input';
         MatTableModule,
         MatCardModule,
         ReactiveFormsModule,
-        MatInputModule
+        MatInputModule,
+        MatDialogModule
         
     ],
     providers: [],
