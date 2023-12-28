@@ -25,7 +25,7 @@ export class ContactsComponent implements OnInit {
     console.log(this.contacstService.getContacts());
   }
 
-  //Ouvre ce "sous-composant"
+  //Ouvre ce "sous-composant", la boite de dialogue ici.
   onUpdate(contact: Contact){
     let dialogRef = this.dialog.open(UpdateDialogComponent, {
       height: '500px',
