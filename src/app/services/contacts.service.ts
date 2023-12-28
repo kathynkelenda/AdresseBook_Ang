@@ -63,4 +63,12 @@ export class ContactsService {
       this.contacts[index].PhoneNumber = updateContact.PhoneNumber;
       this.contacts[index].Address = updateContact.Address;
   }
+
+  deleteContact(id: number){
+    //Retrouvons l'index de l'élément à supprimer via son id
+    const index = this.contacts.findIndex(contact => contact.Id == id);
+
+    //Supprimer l'élément (Supprime un élément du tb à partir de l'index)
+     this.contacts.splice(index, 1);
+  }
 }

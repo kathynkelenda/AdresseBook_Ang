@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Contact } from '../../interfaces/contact';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ContactsService } from '../../services/contacts.service';
@@ -26,7 +26,8 @@ export class UpdateDialogComponent implements OnInit{
 
   //Injection des data provenant de la meth onUpdate() de ContactsComponent
   constructor( @Inject(MAT_DIALOG_DATA) public data: Contact,
-              private ContactsService: ContactsService){
+              private ContactsService: ContactsService,
+              public dialogRef: MatDialogRef<UpdateDialogComponent>){
     this.contactToUpdate = data;
   }
 
@@ -52,6 +53,10 @@ export class UpdateDialogComponent implements OnInit{
     this.ContactsService.updateContact(this.updatecontact);
 
     console.log(this.ContactsService.getContacts());
+
+    //Ferme la boite de dialogue
+    this.dialogRef.close();
+
   }
 
 
