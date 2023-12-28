@@ -42,6 +42,12 @@ export class ContactsComponent implements OnInit {
       width: '500px',
       data: contact,
     });
+
+     //Rafraichie la liste des contacts après fermeture de la boite de dialogue
+     dialogRef.afterClosed().subscribe(result => {
+      this.updateDataSource(this.contactsDataArray);
+    });
+    
   }
 
   onDelete(contact: Contact){

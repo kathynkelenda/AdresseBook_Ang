@@ -43,7 +43,7 @@ export class UpdateDialogComponent implements OnInit{
 
   onSubmit(){
     this.updatecontact = {
-      Id: this.contactToUpdate.Id,
+      Id: this.contactToUpdate.Id, //Id est le même.
       FirstName: this.updateForm.controls['FirstName'].value as string,
       LastName: this.updateForm.controls['LastName'].value as string,
       PhoneNumber: this.updateForm.controls['PhoneNumber'].value as string,
