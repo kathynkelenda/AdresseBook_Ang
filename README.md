@@ -15,7 +15,7 @@
     - Examples: You can see different exemples and the code of each of them (and use it in your app).
      
 
-SUITE ADDRESS BOOK 
+SUITE ADDRESS BOOK
 
 -Création d'un dossier service,
 - Used commande "ng g s services/NomDuService" pr le créer ds le dossier services crée précédemment.
@@ -149,6 +149,7 @@ MM pr créer un formulaire réactif:
 -création du form ds le ts,
 -création de la méth onSubmit() ds le ts,
 -création de la méth onCancelt() ds le ts si besoin ou autres meth.
+
 
 
 
